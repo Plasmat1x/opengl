@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{bc01b81b-5833-46b2-8b4c-5999723c3fc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders\Frag">
+      <UniqueIdentifier>{248c59dd-11b3-46fc-93b3-8f1385c38398}</UniqueIdentifier>
+      <Extensions>frag;</Extensions>
+    </Filter>
+    <Filter Include="shaders\Vert">
+      <UniqueIdentifier>{255b003b-0603-446c-8bce-3109afac6f17}</UniqueIdentifier>
+      <Extensions>vert;</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Header Files\managers">
+      <UniqueIdentifier>{7337a63f-7fd7-4222-8377-8a24c7001956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\managers">
+      <UniqueIdentifier>{302404a3-9ef5-4b78-aa45-9185694eec0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header Files\Scenes">
+      <UniqueIdentifier>{f806601d-30dc-437e-9a25-a11ab22fe003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{b28f30a9-6ffc-4769-8b90-001b03546c62}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationManager.h">
+      <Filter>Source Files\Header Files\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Source Files\Header Files\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Source Files\Header Files\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTest.h">
+      <Filter>Source Files\Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Source Files\Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingObject.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ogl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source Files\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationManager.cpp">
+      <Filter>Source Files\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTest.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\frag.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\vert.glsl">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\base.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\cube.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\light.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\model.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\sprite.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\base.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\shaders\cube.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\shaders\light.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\shaders\model.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\shaders\sprite.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\shaders\text.frag">
+      <Filter>shaders\Frag</Filter>
+    </None>
+    <None Include="..\shaders\text.vert">
+      <Filter>shaders\Vert</Filter>
+    </None>
+    <None Include="..\levels\four.lvl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\levels\one.lvl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\levels\three.lvl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\levels\two.lvl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
