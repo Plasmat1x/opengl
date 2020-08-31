@@ -232,15 +232,15 @@ notes.txt
 .backup/
 bin/.other/
 oglDontWork/
-ogl2/
+ogl2/res/
+ogl2/nuklear/
+ogl2/imgui/
 TestZone/
 models/
 docs/
 3dpart/
 .vs/
-textures/
 ogl/res/
-bin/
 include/stb/.github/
 include/stb/data/
 include/stb/tests/
@@ -257,7 +257,8 @@ include/tinyxml/*.vcxproj
 include/tinyxml/*.gif
 include/tinyxml/xmltest.cpp
 include/tinyxml/*.sln
-
+interpretator
+refactor
 
 
 
@@ -375,3 +376,10 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/x64/Debug/interpretator.exe
+/shaders/for.txt
+/res.txt
+/bin/other/Debug/Win32/vc142.idb
+/bin/other/Debug/Win32/vc141.idb
+/bin/other/Debug/Win32/engine.obj.enc
+/bin/other/Debug/x64/vc141.idb
