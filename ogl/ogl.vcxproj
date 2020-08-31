@@ -180,7 +180,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>../lib/x86/</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
@@ -197,7 +197,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>../lib/x64/</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
@@ -220,7 +220,7 @@
       <AdditionalLibraryDirectories>../lib/x86/</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
@@ -241,7 +241,7 @@
       <AdditionalLibraryDirectories>../lib/x64/</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;glew32.lib;SDL2.lib;opengl32.lib;SOIL.lib;assimp-vc140-mt.lib;freetype.lib;tinyxml.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
