@@ -69,6 +69,47 @@ Sprite::~Sprite()
 
 void Sprite::init()
 {
+
+    v0 = glm::vec2(1.0f, 1.0f);
+    v1 = glm::vec2(1.0f, 0.0f);
+    v2 = glm::vec2(0.0f, 0.0f);
+    v3 = glm::vec2(0.0f, 1.0f);
+
+    vertices = {
+        // positions  // texture
+         1.0f,  1.0f, v0.x, v0.y, // top right
+         1.0f,  0.0f, v1.x, v1.y, // bottom right
+         0.0f,  0.0f, v2.x, v2.y, // bottom left
+         0.0f,  1.0f, v3.x, v3.y  // top left
+    };
+
+    indices = {
+        0,1,3,
+        1,2,3
+    };
+
+    glGenVertexArrays(1, &this->VAO);
+    glGenBuffers(1, &this->VBO);
+    glGenBuffers(1, &this->EBO);
+
+    glBindVertexArray(this->VAO);
+
+    glBindBuffer(GL_ARRAY_BUFFER, this->VBO);
+    glBufferData(GL_ARRAY_BUFFER, 16 * sizeof(GLfloat), NULL, GL_STREAM_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(GLuint), NULL, GL_STREAM_DRAW);
+
+    // position attribute
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (void*)0);
+    glEnableVertexAttribArray(0);
+    // texture coord attribute
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (void*)(2 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
+
     //glActiveTexture(GL_TEXTURE0);
     //glBindVertexArray(this->VAO);
 

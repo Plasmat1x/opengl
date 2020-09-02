@@ -83,56 +83,11 @@ Image ResourceManager::loadImageFromFile(const GLchar* file)
     return image;
 }
 
-
-//в помойку -------------------------------------------------------------
-//Текстуры нах не нужны
-std::map<std::string, Texture> ResourceManager::textures;
-//удалить
-Texture ResourceManager::loadTextureFromFile(const GLchar* file, GLboolean alpha)
-{
-    Texture texture;
-
-    if (alpha)
-    {
-        texture.internal_format = GL_RGBA;
-        texture.image_format = GL_RGBA;
-    }
-
-    int width, height;
-    unsigned char* data = SOIL_load_image(file, &width, &height, 0, texture.image_format == GL_RGBA ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
-
-    if (!data)
-    {
-        std::cout << "SOIL: Can't load image by path: " << file << std::endl;
-    }
-
-    texture.generate(width, height, data);
-    SOIL_free_image_data(data);
-    return texture;
-}
-// на удаление
-Texture ResourceManager::loadTexture(const GLchar* file, GLboolean alpha, std::string name)
-{
-    textures[name] = loadTextureFromFile(file, alpha);
-    return textures[name];
-}
-// на удаление
-Texture ResourceManager::getTexture(std::string name)
-{
-    return textures[name];
-}
-
 //функции менеджера
 void ResourceManager::clear()
 {
     for (auto iter : shaders)
         glDeleteProgram(iter.second.ID);
-
-    for (auto iter : images)
-        iter.second.cleanup();
-
-    for (auto iter : textures)
-        glDeleteTextures(1, &iter.second.ID);
 }
 
 

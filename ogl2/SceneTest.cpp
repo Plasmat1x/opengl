@@ -8,6 +8,7 @@ SceneTest SceneTest::m_SceneTest;
 
 void SceneTest::init(GLFWwindow& window)
 {
+    //--info--
     std::cout << "GLFW version: " << glfwGetVersionString() << std::endl;
     std::cout << "tinyxml version: " << TIXML_MAJOR_VERSION << "." << TIXML_MINOR_VERSION << std::endl;
     std::cout << "GLEW version: " << glewGetString(GLEW_VERSION_MAJOR) << "." << glewGetString(GLEW_VERSION_MINOR) << "." << glewGetString(GLEW_VERSION_MICRO) << std::endl;
@@ -17,19 +18,25 @@ void SceneTest::init(GLFWwindow& window)
 
     this->window = &window;
     glfwSetWindowTitle(&window, "Test scene");
-
-    projection = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -1.0f, 1.0f);
-    glm::mat4 view = glm::mat4(1.0f);
-
-    ResourceManager::loadShader("../shaders/spriteTest.vert", "../shaders/spriteTest.frag", nullptr, "sprite");
+    //--shader load and setup--
+    ResourceManager::loadShader("../shaders/sprite.vert", "../shaders/sprite.frag", nullptr, "sprite");
+    ResourceManager::getShader("sprite").use();
     ResourceManager::getShader("sprite").SetInteger("image", 0);
     ResourceManager::getShader("sprite").SetMatrix4("projection", projection);
     ResourceManager::getShader("sprite").SetMatrix4("view", view);
-    ResourceManager::loadImage("../textures/testPlayer.png", "player");
-    ResourceManager::loadTexture("../textures/testPlayer.png", GL_TRUE, "player");
+    //--Image load--
+    ResourceManager::loadImage("../textures/testPlayer.png", "sprite");
 
+    //--sprite setup--
+    Texture texture;
+    texture.loadTextureFromImage(ResourceManager::getImage("sprite"));
     sprite = new Sprite("sprite");
-    sprite->setTexture(ResourceManager::getTexture("block"));
+    sprite->setShader(ResourceManager::getShader("sprite"));
+    sprite->setTexture(texture);
+    sprite->setPosition(100, 100);
+    sprite->setSize(64, 128);
+    sprite->setTextureRect(0, 0, 64, 128);
+    sprite->setColor(1.0f, 1.0f, 1.0f);
 }
 
 void SceneTest::processInput(GLboolean keys[], GLboolean bt[])

@@ -24,8 +24,6 @@ public:
     static Shader getShader(std::string name);
     static Image loadImage(const GLchar* file, std::string name);
     static Image getImage(std::string name);
-    static Texture loadTexture(const GLchar* file, GLboolean alpha, std::string name);
-    static Texture getTexture(std::string name);
 
     static void clear();
 private:
@@ -33,6 +31,5 @@ private:
 
     static Shader loadShaderFromFile(const GLchar* vShaderFile, const GLchar* fShaderFile, const GLchar* gShaderFile = nullptr);
     static Image loadImageFromFile(const GLchar* file);
-    static Texture loadTextureFromFile(const GLchar* file, GLboolean alpha);
 };
 
