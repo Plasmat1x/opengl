@@ -12,6 +12,7 @@ public:
 
     glm::mat4 view;
 
+    Camera();
     Camera(glm::vec2 position);
 
     ~Camera();

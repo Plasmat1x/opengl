@@ -7,12 +7,26 @@
 #include <cstdlib>
 
 #include <glm/glm.hpp>
+#include <tinyxml/tinyxml.h>
+#include "Sprite.h"
+#include "shader.h"
 
-struct TileData
+struct Object
 {
-    int index;
-    glm::vec2 position;
-    glm::vec2 size;
+    int GetPropertyInt(std::string name);
+    float GetPropertyFloat(std::string name);
+    std::string GetPropertyString(std::string name);
+    std::string name;
+    std::string type;
+    glm::ivec4 rect;
+    std::map<std::string, std::string> properties;
+    Sprite* sprite;
+};
+
+struct Layer
+{
+    float opacity;
+    std::vector<Sprite*> tiles;
 };
 
 class Map
@@ -21,13 +35,24 @@ public:
     Map();
     ~Map();
 
-    bool loadFromFile(std::string filePath);
     bool loadFromXML(std::string filePath);
-    std::vector<TileData> getMapData();
+
+    glm::ivec2 getTileSize();
+    std::vector<Layer> getMapData();
+    std::vector<Object> getObjects();
+
+    void draw();
+    void cleanup();
 
 private:
-
-    std::vector<TileData> mapData;
-
+    int firstTileID;
+    glm::ivec2 size;
+    glm::ivec2 tileSize;
+    glm::ivec2 tilesetCR;
+    glm::vec4 drawingBounds;
+    Texture mapTileset;
+    std::vector<Layer> layers;
+    std::vector<glm::ivec4> subRects;
+    std::vector<Object> objects;
 };
 

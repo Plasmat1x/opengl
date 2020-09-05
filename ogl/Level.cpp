@@ -1,3 +1,5 @@
+#include "..\ogl2\Level.h"
+#include "..\ogl2\Level.h"
 #include "Level.h"
 #include <fstream>
 #include <sstream>
@@ -16,6 +18,14 @@ Level::~Level()
     }
     this->levelObjects.clear();
     this->levelData.clear();
+}
+
+void Level::setMap(std::string map)
+{
+}
+
+void Level::setMap(Map& map)
+{
 }
 
 void Level::loadFromFile(const GLchar* file)

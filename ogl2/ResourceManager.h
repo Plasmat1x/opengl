@@ -12,6 +12,7 @@
 #include "Image.h"
 #include "Texture.h"
 #include "Shader.h"
+#include "Map.h"
 
 class ResourceManager
 {

@@ -1,6 +1,10 @@
 #include "Camera.h"
 #include "ResourceManager.h"
 
+Camera::Camera()
+{
+
+}
 
 Camera::Camera(glm::vec2 position)
 {

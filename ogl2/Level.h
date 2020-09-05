@@ -8,42 +8,23 @@
 
 #include "Sprite.h"
 #include "Texture.h"
-
-struct Object
-{
-    glm::vec2 size;
-    glm::vec2 position;
-    Sprite* sprite;
-};
-
-struct Layer
-{
-    float opacity;
-    std::vector<Sprite*> tiles;
-};
+#include "Map.h"
 
 class Level
 {
 public:
+    Level();
+    ~Level();
 
-    bool loadFromFile();
-    bool loadFromXML(std::string Path);
+    void setMap(std::string map);
+    void setMap(Map& map);
 
     void draw();
-
     void cleanup();
 
 private:
+    Map map;
 
-    int width; 
-    int height;
-    int tileWidth;
-    int tileHeight;
-    int firstTileID;
-
-    Texture tileSet;
-
-    std::vector<Layer> mapData;
-
+    std::vector<Object> objects;
 };
 

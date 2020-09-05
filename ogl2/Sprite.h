@@ -22,7 +22,7 @@ public:
 ///<summary>
 /// <para>DEFAULT WORKED INIT</para>
 /// <para>Sprite* sprite;</para>
-/// <para>sprite = new Sprite();</para>
+/// <para>sprite = new Sprite(shader_name);</para>
 /// <para>sprite->setTexture(ResourceManager::getTexture("block"));</para>
 /// <para>sprite->setPosition(glm::vec2(0, 0));</para>
 /// <para>sprite->setSize(glm::vec2(64, 64));</para>
