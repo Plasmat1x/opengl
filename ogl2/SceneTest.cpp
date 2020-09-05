@@ -2,7 +2,6 @@
 #include "ResourceManager.h"
 #include "Tools.h"
 #include "Sprite.h"
-#include "tinyxml/tinyxml.h"
 
 SceneTest SceneTest::m_SceneTest;
 
@@ -27,6 +26,8 @@ void SceneTest::init(GLFWwindow& window)
     ResourceManager::getShader("sprite").SetMatrix4("view", view);
     //--Image load--
     ResourceManager::loadImage("../textures/testPlayer.png", "sprite");
+    //--Map load--
+    ResourceManager::loadMap("../levels/testLevel.tmx", "map");
 
     //--sprite setup--
     Texture texture;
@@ -36,6 +37,7 @@ void SceneTest::init(GLFWwindow& window)
     sprite->setTexture(texture);
     sprite->setPosition(100, 100);
     sprite->setSize(64, 128);
+    sprite->setColor(1.0f, 0.0f, 0.0f);
 
     level.setMap("../levels/testLevel.tmx");
 
@@ -86,6 +88,7 @@ void SceneTest::cleanup()
 
 void SceneTest::pause()
 {
+
 }
 
 void SceneTest::resume()

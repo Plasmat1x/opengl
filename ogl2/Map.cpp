@@ -1,13 +1,9 @@
 #include "Map.h"
 
-//#include "tinyxml/tinyxml.h"
-#include "ResourceManager.h"
-
-
 Map::Map()
 {
-}
 
+}
 
 Map::~Map()
 {

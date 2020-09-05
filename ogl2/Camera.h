@@ -3,9 +3,6 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "Entity.h"
-#include "Player.h"
-
 class Camera
 {
 public:
@@ -40,12 +37,3 @@ private:
 
     void updateCameraVectors();
 };
-
-/* bad worked  it in sycle
-view = glm::lookAt(
-    glm::normalize(glm::vec3(player->position.x, player->position.y, 1)),
-    glm::normalize(glm::vec3(player->position.x, player->position.y, -1)),
-    glm::normalize(glm::vec3(0, 1, 0))
-);
-ResourceManager::getShader("sprite").SetMatrix4("view", view, GL_TRUE);
-*/

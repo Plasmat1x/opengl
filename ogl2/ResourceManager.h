@@ -20,11 +20,16 @@ public:
     static std::map<std::string, Image> images;
     static std::map<std::string, Shader> shaders;
     static std::map<std::string, Texture> textures;
+    static std::map<std::string, Map> maps;
 
     static Shader loadShader(const GLchar* vShaderFile, const GLchar* fShaderFile, const GLchar* gShaderFile, std::string name);
     static Shader getShader(std::string name);
+
     static Image loadImage(const GLchar* file, std::string name);
     static Image getImage(std::string name);
+
+    static Map loadMap(std::string file, std::string name);
+    static Map getMap(std::string name);
 
     static void clear();
 private:
@@ -32,5 +37,6 @@ private:
 
     static Shader loadShaderFromFile(const GLchar* vShaderFile, const GLchar* fShaderFile, const GLchar* gShaderFile = nullptr);
     static Image loadImageFromFile(const GLchar* file);
+    static Map loadMapFromFile(std::string file);
 };
 

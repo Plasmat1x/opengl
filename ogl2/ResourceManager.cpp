@@ -58,7 +58,6 @@ Shader ResourceManager::loadShaderFromFile(const GLchar* vShaderFile, const GLch
     return shader;
 }
 
-
 //изображения
 std::map<std::string, Image> ResourceManager::images;
 
@@ -81,6 +80,27 @@ Image ResourceManager::loadImageFromFile(const GLchar* file)
     image.loadImageFromFile(file);
 
     return image;
+}
+
+//карта
+std::map<std::string, Map> ResourceManager::maps;
+
+Map ResourceManager::loadMap(std::string file, std::string name)
+{
+    maps[name] = loadMapFromFile(file);
+    return maps[name];
+}
+
+Map ResourceManager::getMap(std::string name)
+{
+    return maps[name];
+}
+
+Map ResourceManager::loadMapFromFile(std::string file)
+{
+    Map map;
+    map.loadFromXML(file);
+    return map;
 }
 
 //функции менеджера

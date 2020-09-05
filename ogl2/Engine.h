@@ -45,11 +45,6 @@ public:
     const int MAX_FRAMESKIP = 5;
     int loops;
     float interpolation;
-    
-    /* на перемещение
-    glm::mat4 view = glm::mat4(1.0f);
-    glm::mat4 projection = glm::mat4(1.0f);
-    */
 
     Engine();
     ~Engine();
