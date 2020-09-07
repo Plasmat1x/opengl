@@ -32,7 +32,6 @@ void Engine::run()
 
         while (eleapsedTimeAsMilisecond > next_game_tick && loops < MAX_FRAMESKIP)
         {
-
             glfwPollEvents();
             processInput();
             update(deltaTime);
@@ -40,7 +39,8 @@ void Engine::run()
             next_game_tick += SKIP_TICKS;
             loops++;
         }
-        interpolation = float(eleapsedTimeAsMilisecond + SKIP_TICKS - next_game_tick / float(SKIP_TICKS));
+        interpolation = float(eleapsedTimeAsMilisecond 
+            + SKIP_TICKS - next_game_tick / float(SKIP_TICKS));
         render();
     }
 

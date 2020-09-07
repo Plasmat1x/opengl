@@ -3,9 +3,7 @@
 #include <GLFW/glfw3.h>
 
 #include "Scene.h"
-#include "Sprite.h"
 #include "Level.h"
-#include "Camera.h"
 
 class SceneTest : public Scene
 {
@@ -33,8 +31,6 @@ private:
     glm::mat4 view = glm::mat4(1.0f);
     glm::mat4 projection = glm::ortho(0.0f, 800.0f, 600.0f, 0.0f, -1.0f, 1.0f);
 
-    Sprite* sprite;
-    Level level;
-    Camera* cam;
+    Level* level;
 };
 

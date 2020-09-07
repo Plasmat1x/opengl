@@ -48,8 +48,8 @@ void Camera::move(glm::vec2 offset)
 
 void Camera::setOffset(GLfloat xoffset, GLfloat yoffset)
 {
-    this->xOffset = xoffset;
-    this->yOffset = yoffset;
+    this->xOffset = -400 + xoffset;
+    this->yOffset = -300 + yoffset;
 }
 
 void Camera::updateCameraVectors()

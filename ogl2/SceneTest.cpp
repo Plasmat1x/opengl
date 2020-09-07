@@ -1,7 +1,7 @@
 #include "SceneTest.h"
 #include "ResourceManager.h"
 #include "Tools.h"
-#include "Sprite.h"
+
 
 SceneTest SceneTest::m_SceneTest;
 
@@ -26,64 +26,47 @@ void SceneTest::init(GLFWwindow& window)
     ResourceManager::getShader("sprite").SetMatrix4("view", view);
     //--Image load--
     ResourceManager::loadImage("../textures/testPlayer.png", "sprite");
-    //--Map load--
-    ResourceManager::loadMap("../levels/testLevel.tmx", "map");
 
-    //--sprite setup--
-    Texture texture;
-    texture.loadTextureFromImage(ResourceManager::getImage("sprite"));
-    sprite = new Sprite("sprite");
-    sprite->setShader(ResourceManager::getShader("sprite"));
-    sprite->setTexture(texture);
-    sprite->setPosition(100, 100);
-    sprite->setSize(64, 128);
-    sprite->setColor(1.0f, 0.0f, 0.0f);
-
-    level.setMap("../levels/testLevel.tmx");
-
-    cam = new Camera(sprite->getPosition());
-    cam->setOffset(-400, -300);
+    level = new Level();
+    level->setMap("../levels/testLevel.tmx");
 }
 
 void SceneTest::processInput(GLboolean keys[], GLboolean bt[])
 {
     if (keys[GLFW_KEY_D])
     {
-        sprite->setPosition(sprite->getPosition().x + 6, sprite->getPosition().y);
+        level->sprite->setPosition(level->sprite->getPosition().x + 6, level->sprite->getPosition().y);
     }
 
     if (keys[GLFW_KEY_A])
     {
-        sprite->setPosition(sprite->getPosition().x - 6, sprite->getPosition().y);
+        level->sprite->setPosition(level->sprite->getPosition().x - 6, level->sprite->getPosition().y);
     }
 
     if (keys[GLFW_KEY_S])
     {
-        sprite->setPosition(sprite->getPosition().x, sprite->getPosition().y + 6);
+        level->sprite->setPosition(level->sprite->getPosition().x, level->sprite->getPosition().y + 6);
     }
 
     if (keys[GLFW_KEY_W])
     {
-        sprite->setPosition(sprite->getPosition().x, sprite->getPosition().y - 6);
+        level->sprite->setPosition(level->sprite->getPosition().x, level->sprite->getPosition().y - 6);
     }
 }
 
 void SceneTest::update(float deltaTime)
 { 
-    cam->update();
-    cam->setPosition(sprite->getPosition());
-    ResourceManager::getShader("sprite").SetMatrix4("view", cam->getMatrixView(), GL_TRUE);
+    level->update(deltaTime);   
 }
 
 void SceneTest::render()
 {
-    level.draw();
-    sprite->draw();
+    level->draw();
 }
 
 void SceneTest::cleanup()
 {
-    delete sprite;
+    delete level;
 }
 
 void SceneTest::pause()

@@ -40,7 +40,7 @@ public:
     float deltaTime = 0.0f;
     float lastFrame = 0.0f;
 
-    const int TICKS_PER_SECOND = 60;
+    const int TICKS_PER_SECOND = 120;
     const int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
     const int MAX_FRAMESKIP = 5;
     int loops;
